@@ -1,0 +1,2 @@
+INSERT INTO wtf VALUES(1155707775,'Гайка','xxx','jabber.ttn.ru','Гайка','пенсионерка конфы 8)');
+INSERT INTO wtf VALUES(1213196764,'Капитанская','xxx','jabber.ru','info','info');
