@@ -107,7 +107,7 @@ if __name__ == "__main__" :
 	for tmp in lf:
 		if tmp[-4:] == '.txt':
 			msg, result, lz = regenerate(path_to_locale,tmp)
-			writefile(tmp,result.encode('utf-8'))
+			writefile(tmp,'%s\n' % result.encode('utf-8'))
 			print msg
 	print 'Total found definitions: %s\n' % lz
 	print 'Done!'

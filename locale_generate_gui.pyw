@@ -223,6 +223,7 @@ class MainWindow(QtGui.QMainWindow):
 		for k in ls:
 			if main_interface: self.loc_dict[k][self.nontrans[self.curs]] = '%s\t%s' % (tmp_en, self.textEdit[k].toPlainText().replace('\n', '\\n').replace('\t', '\\t'))
 			result = '\n'.join(self.loc_dict[k])
+			if not result.endswith('\n\n'): result = '%s\n' % result
 			locale_generate.writefile('%s.txt' % k,result.encode('utf-8'))
 			tmp_body = []
 			for t in result.split('\n\n',1)[1].split('\n'):
@@ -233,6 +234,7 @@ class MainWindow(QtGui.QMainWindow):
 				tmp2_body.append(tmp_body[cnt])
 				cnt += 1
 			original_file = '%s\n\n%s' % (locale_generate.readfile('%s/%s.txt' % (locale_generate.path_to_locale,k)).decode('UTF').replace('\r','').split('\n\n',1)[0],'\n'.join(tmp2_body))
+			if not original_file.endswith('\n\n'): original_file = '%s\n' % original_file
 			locale_generate.writefile('%s/%s.txt' % (locale_generate.path_to_locale,k),original_file.encode('utf-8'))
 		if main_interface:
 			if not self.regenerate():
