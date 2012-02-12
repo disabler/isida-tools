@@ -3,7 +3,7 @@
 about_txt = '''
 # --------------------------------------------------------------------------- #
 #                                                                             #
-#    GUI for locale_generate.py                                               #
+#    GUI for locale_generate_branch.py                                        #
 #    Copyright (C) 2012 Vit@liy <vitaliy@root.ua>                             #
 #                                                                             #
 #    This program is free software: you can redistribute it and/or modify     #
@@ -24,7 +24,7 @@ about_txt = '''
 
 import sys
 import os
-import locale_generate
+import locale_generate_branch
 from PyQt4 import QtGui, QtCore, Qt
 
 class MainWindow(QtGui.QMainWindow):
@@ -34,7 +34,7 @@ class MainWindow(QtGui.QMainWindow):
 		self.setWindowIcon(Qt.QIcon("icons/isida.png"))
 		if self.regenerate():
 			self.resize(400, 150)
-			self.setWindowTitle('GUI for locale_generate.py')
+			self.setWindowTitle('GUI for locale_generate_branch_branch.py')
 
 			self.window = Qt.QWidget()
 
