@@ -34,7 +34,7 @@ class MainWindow(QtGui.QMainWindow):
 		self.setWindowIcon(Qt.QIcon("icons/isida.png"))
 		if self.regenerate():
 			self.resize(400, 150)
-			self.setWindowTitle('GUI for locale_generate_branch_branch.py')
+			self.setWindowTitle('GUI for locale_generate_branch.py')
 
 			self.window = Qt.QWidget()
 
