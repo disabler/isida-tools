@@ -87,7 +87,7 @@ def regenerate(ptl,locale_name):
 
 	msg = 'write locale file: %s' % locale_name
 	if error_count: msg += '\nmissed translations: %s\n' % error_count
-	else: msg += '\nregenarated without mistakes!\n'
+	else: msg += '\nregenerated without mistakes!\n'
 
 	return msg, result, len(localez)
 
