@@ -24,7 +24,7 @@ about_txt = '''
 
 import sys
 import os
-import locale_generate_branch
+import locale_generate_branch as locale_generate
 from PyQt4 import QtGui, QtCore, Qt
 
 class MainWindow(QtGui.QMainWindow):
