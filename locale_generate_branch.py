@@ -75,7 +75,7 @@ def regenerate(ptl,locale_name):
 					localez.append(tmp2)
 					tm2.append(tmp2)
 			if tm2:
-				result += '%s%s\n' % (file_mark,tmp)
+				result += '%s%s\n' % (file_mark,'/'.join(tmp.split('/')[2:]))
 				for tmp2 in tm2:
 					tr = L(tmp2)
 					if tmp2 == tr:
