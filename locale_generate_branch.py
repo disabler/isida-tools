@@ -92,7 +92,7 @@ def regenerate(ptl,locale_name):
 	return msg, result, len(localez)
 
 path_to_source = '../branch'
-path_to_locale = '../branch/locales/'
+path_to_locale = '../branch/data/locales/'
 path_to_plugins = '%s/plugins' % path_to_source
 locale_mark = 'NO_TRANSLATE'
 file_mark = '# file: '
