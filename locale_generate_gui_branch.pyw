@@ -134,7 +134,7 @@ class MainWindow(QtGui.QMainWindow):
 			self.layout_main.setSpacing(3)
 			self.window.setLayout(self.layout_main)
 			
-			lbl = QtGui.QLabel('<center>Regenarated without mistakes!<\center>')
+			lbl = QtGui.QLabel('<center>Regenerated without mistakes!<\center>')
 			self.layout_main.addWidget(lbl)
 			quit_act = QtGui.QPushButton('Quit')
 			self.layout_main.addWidget(quit_act)
@@ -238,7 +238,7 @@ class MainWindow(QtGui.QMainWindow):
 			locale_generate.writefile('%s/%s.txt' % (locale_generate.path_to_locale,k),original_file.encode('utf-8'))
 		if main_interface:
 			if not self.regenerate():
-				self.show_info('Regenarated without mistakes!')
+				self.show_info('Regenerated without mistakes!')
 				self.close()
 			else:
 				for n, k in enumerate(self.loc_dict.keys()):
