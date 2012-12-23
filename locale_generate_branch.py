@@ -47,10 +47,10 @@ def regenerate(ptl,locale_name):
 	regex = r'L\(u?\'(.*?)\'\)'
 
 	for tmp in root_files:
-		if tmp[-3:] == '.py' and tmp[0] != '.': file_list.append('%s/%s' % (path_to_source,tmp))
+		if tmp[-3:] == '.py' and tmp[0] not in ['.','_']: file_list.append('%s/%s' % (path_to_source,tmp))
 
 	for tmp in plugins_files:
-		if tmp[-3:] == '.py' and tmp[0] != '.': file_list.append('%s/%s' % (path_to_plugins,tmp))
+		if tmp[-3:] == '.py' and tmp[0] not in ['.','_']: file_list.append('%s/%s' % (path_to_plugins,tmp))
 
 	locales = {}
 
