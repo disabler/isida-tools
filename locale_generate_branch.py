@@ -44,7 +44,7 @@ def regenerate(ptl,locale_name):
 	plugins_files = os.listdir(path_to_plugins)
 	plugins_files.sort()
 	file_list,localez = [],[]
-	regex = r'L\(u?\'(.*?)\'\)'
+	regex = r'L\(u?\'(.*?)\'[,|\)]'
 
 	for tmp in root_files:
 		if tmp[-3:] == '.py' and tmp[0] not in ['.','_']: file_list.append('%s/%s' % (path_to_source,tmp))
