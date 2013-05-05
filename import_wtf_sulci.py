@@ -3,8 +3,8 @@
 
 # --------------------------------------------------------------------------- #
 #                                                                             #
-#    Import dump of wtf base from sulci to iSida Jabber Bot                   #
-#    Copyright (C) 2011 diSabler <dsy@dsy.name>                               #
+#    Locale generator for iSida Jabber Bot                                    #
+#    Copyright (C) diSabler <dsy@dsy.name>                                    #
 #                                                                             #
 #    This program is free software: you can redistribute it and/or modify     #
 #    it under the terms of the GNU General Public License as published by     #
