@@ -23,6 +23,8 @@
 
 import os,re
 
+def L(t): return t
+
 def readfile(filename):
 	fp = file(filename)
 	data = fp.read()
@@ -85,6 +87,15 @@ def regenerate(ptl,locale_name):
 					result += '%s\t%s\n' % (tmp2,loc)
 				result += '\n'
 
+	
+	execfile(path_to_mainpy,globals())
+	for t in config_prefs.keys():
+		localez.append(config_prefs[t][0])
+		localez.append(config_prefs[t][1])
+		
+	for t in config_groups:
+		localez.append(t[0])
+
 	msg = 'write locale file: %s' % locale_name
 	if error_count: msg += '\nmissed translations: %s\n' % error_count
 	else: msg += '\nregenarated without mistakes!\n'
@@ -92,8 +103,14 @@ def regenerate(ptl,locale_name):
 	return msg, result, len(localez)
 
 path_to_source = '../branch'
-path_to_locale = '../branch/data/locales/'
+path_to_locale = '%s/data/locales/' % path_to_source
 path_to_plugins = '%s/plugins' % path_to_source
+path_to_mainpy = '%s/main.py' % path_to_plugins
+
+smiles_dirs = []
+data_folder = path_to_source + '/data/%s'
+loc_folder 	= data_folder % 'locales/%s.txt'
+	
 locale_mark = 'NO_TRANSLATE'
 file_mark = '# file: '
 locale_header = '''#---------------------------------------------
